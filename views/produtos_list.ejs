@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title><%= title %></title>
+</head>
+<body>
+
+    <header>
+        <h1>
+            <%= title %>
+        </h1>
+        <h3>
+            <%= subtitle %>
+        </h3>
+    </header>
+
+    <nav>
+        <a href="#">Lista de Produtos</a>
+        <a href="/produtos/cadastrar">Cadastrar Produto</a>
+    </nav>
+
+    <main>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Descrição</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% lista.forEach((produto)=>{ %>
+                    <tr>
+                        <td><%= produto.id %> </td>
+                        <td><%= produto.nome %></td>
+                        <td><%= produto.descricao %></td>
+                    </tr>
+                <% }) %>
+            </tbody>
+        </table>
+    </main>
+
+    <footer>
+        <h2><%= title %></h2>
+    </footer>
+</body>
+</html>

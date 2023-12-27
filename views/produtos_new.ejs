@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title><%= title %></title>
+</head>
+<body>
+
+    <header>
+        <h1><%= title %></h1>
+        <h3><%= subtitle %></h3>
+    </header>
+
+    <nav>
+        <a href="/produtos">Lista de Produtos</a>
+        <a href="#">Cadastrar Produto</a>
+    </nav>
+    
+    <main>
+        <form action="/produtos/cadastrar" method="POST">
+            <label>Nome:
+                <input type="text" name="nome" required maxlength="20">
+            </label>
+            <label>Descrição:
+                <input type="text" name="descricao" required maxlength="100">
+            </label>
+            <button type="submit">Salvar</button>
+        </form>
+    </main>
+
+    <footer>
+        <h2><%= title %></h2>
+    </footer>
+
+</body>
+</html>
